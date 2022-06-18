@@ -8,7 +8,7 @@ const Component = styled(Box)`
 
 const Image = styled(Box)`
     background: #2874f0 url(https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png) center 85% no-repeat;
-    height: 82.3%;
+    height: 82%;
     width: 28%;
     padding: 45px 35px;
     & > p, & > h5{
@@ -20,11 +20,11 @@ const Image = styled(Box)`
 const Wrapper = styled(Box)`
     display: flex;
     flex-direction: column;
-    padding: 0px 35px 0px 35px;
+    padding: 25px 35px;
     overflow: hidden;
     flex: 1;
     & > div, & > button, & > p{
-        margin-top: 15px;
+        margin-top: 20px;
     }
 `;
 
