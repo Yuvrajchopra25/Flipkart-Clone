@@ -2,25 +2,25 @@ import { useState } from 'react';
 import { Dialog, Box, TextField, Typography, Button, styled } from '@mui/material';
 
 const Component = styled(Box)`
-    height: 70vh;
+    height: 80vh;
     width: 90vh;
 `;
 
 const Image = styled(Box)`
     background: #2874f0 url(https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png) center 85% no-repeat;
-    height: 79.9%;
+    height: 82.3%;
     width: 28%;
     padding: 45px 35px;
     & > p, & > h5{
         color: #FFFFFF;
         font-weight: 600;
     }
-`
+`;
 
 const Wrapper = styled(Box)`
     display: flex;
     flex-direction: column;
-    padding: 0px 35px 40px 35px;
+    padding: 0px 35px 0px 35px;
     overflow: hidden;
     flex: 1;
     & > div, & > button, & > p{
