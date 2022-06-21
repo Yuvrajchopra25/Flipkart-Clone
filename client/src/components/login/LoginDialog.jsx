@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Dialog, Box, TextField, Typography, Button, styled } from '@mui/material';
 
 import { authenticateSignup } from '../../service/api';
+import { DataContext } from '../../context/DataProvider';
 
 const Component = styled(Box)`
     height: 80vh;
@@ -87,6 +88,8 @@ const LoginDialog = ({open, setOpen}) => {
     const [account, toggleAccount] = useState(accountIntitialValues.login);
     const [signup, setSignup] = useState(signupInitialValues);
 
+    const { setAccount } = useContext(DataContext);
+
     // to close the login dialog on clicking outside the login dialog
     const handleClose = () =>{
         setOpen(false);
@@ -104,6 +107,9 @@ const LoginDialog = ({open, setOpen}) => {
 
     const signupUser = async () =>{
         let response = await authenticateSignup(signup);
+        if (!response) return;
+        handleClose();
+        setAccount(signup.firstname);
     }
     
     return(
