@@ -121,6 +121,7 @@ const LoginDialog = ({open, setOpen}) => {
                         <Typography style={{marginTop: 20}}>{account.subHeading}</Typography>
                     </Image>
                     {
+                        // Login dialog
                         account.view === 'login' ?
                     <Wrapper>
                         <TextField variant="standard" label="Enter Email/Mobile number" />
@@ -132,6 +133,7 @@ const LoginDialog = ({open, setOpen}) => {
                         <CreateAccount onClick={()=>toggleSignup()}>New to Flipkart? Create an account</CreateAccount>
                     </Wrapper>
                     :
+                    // Signup dialog
                     <Wrapper>
                         <TextField variant="standard" onChange={(e)=>onInputChange(e)} name="firstname" label="Enter Firstname" />
                         <TextField variant="standard" onChange={(e)=>onInputChange(e)} name="lastname" label="Enter Lastname" />
